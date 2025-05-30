@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chúc mừng sinh nhật Mẹ</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .slideshow {
+      max-width: 90%;
+      height: auto;
+      margin: 0 auto 30px;
+      position: relative;
+    }
+
+    .slideshow img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 15px;
+      display: none;
+    }
+
+    .slideshow img.active {
+      display: block;
+    }
+
+    .message {
+      font-size: 1.2rem;
+      margin: 30px auto;
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      margin-top: 20px;
+      max-width: 100%;
+      border-radius: 15px;
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+  <source src="birthday_music.mp3" type="audio/mpeg">
+  Trình duyệt không hỗ trợ phát nhạc.
+</audio>
+  <div class="container">
+    <h1>🎉 Chúc mừng sinh nhật Mẹ! 🎂</h1>
+
+    <div class="slideshow">
+      <img src="1.jpg" class="active" alt="Ảnh kỷ niệm 1">
+      <img src="2.jpg" alt="Ảnh kỷ niệm 2">
+      <img src="3.jpg" alt="Ảnh kỷ niệm 3">
+      <img src="4.jpg" alt="Ảnh kỷ niệm 4">
+      <img src="5.jpg" alt="Ảnh kỷ niệm 5">
+      <img src="6.jpg" alt="Ảnh kỷ niệm 6">
+      <img src="7.jpg" alt="Ảnh kỷ niệm 7">
+      <img src="8.jpg" alt="Ảnh kỷ niệm 8">
+      <img src="9.jpg" alt="Ảnh kỷ niệm 9">
+      <img src="10.jpg" alt="Ảnh kỷ niệm 10">
+      <img src="11.jpg" alt="Ảnh kỷ niệm 11">
+    </div>
+
+    <div class="message">
+      <p>Con chúc mẹ tuổi mới thật nhiều sức khỏe, luôn luôn vui vẻ và hạnh phúc bên gia đình! ❤️</p>
+    </div>
+
+    <iframe width="0" height="0" src="birthday_music.mp3" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <script>
+    const images = document.querySelectorAll('.slideshow img');
+    let current = 0;
+
+    setInterval(() => {
+      images[current].classList.remove('active');
+      current = (current + 1) % images.length;
+      images[current].classList.add('active');
+    }, 3000);
+  </script>
+
+  <div style="margin-top: 20px;">
+    <a href="cake.html"><button>🎂 Thổi nến và cắt bánh</button></a>
+  </div>
+</body>
+</html>
